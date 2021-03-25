@@ -1,10 +1,11 @@
 import React, { useRef } from "react";
+import "./NewTodo.css";
 
 type NewTodoProps = {
-    onAdd: (text: string) => void 
-}
+  onAdd: (text: string) => void;
+};
 
-const NewTodo: React.FC <NewTodoProps> = props => {
+const NewTodo: React.FC<NewTodoProps> = (props) => {
   const inputTextRef = useRef<HTMLInputElement>(null);
   const todoSumbit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -13,7 +14,7 @@ const NewTodo: React.FC <NewTodoProps> = props => {
   };
   return (
     <form onSubmit={todoSumbit}>
-      <div>
+      <div className="form">
         <label htmlFor="todo">Todo</label>
         <input type="text" id="list" ref={inputTextRef} />
       </div>

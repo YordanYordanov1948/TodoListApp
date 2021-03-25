@@ -15,7 +15,7 @@ const App: React.FC = () => {
 
   const todoDeleteHandler = (todoId: string) => {
     setTodos((oldTodos) => {
-      return oldTodos.filter((todo => todo.id !== todoId));
+      return oldTodos.filter((todo) => todo.id !== todoId);
     });
   };
 
